@@ -1,0 +1,261 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #2F4F4E;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+}
+
+/* Login Container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* Login Panel */
+.login-panel {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 40px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* Branding Section */
+.branding {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo-shape {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    background: #20c997;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logo-shape span {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 400;
+}
+
+/* Form Styles */
+.login-form {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 6px;
+}
+
+.input-icon {
+    color: #666666;
+    flex-shrink: 0;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    color: #333333;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #999999;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #17A2B8;
+    box-shadow: 0 0 0 2px rgba(32, 201, 151, 0.1);
+}
+
+/* Password Input Wrapper */
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666666;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #333333;
+}
+
+.eye-icon {
+    color: inherit;
+}
+
+/* Sign In Button */
+.signin-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: #17A2B8;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.signin-btn:hover {
+    background: #17A2B8;
+}
+
+.signin-btn:active {
+    background: #17A2B8;
+}
+
+/* Forgot Password */
+.forgot-password {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.forgot-link {
+    color: #666666;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+    color: #333333;
+}
+
+/* Divider */
+.divider {
+    height: 1px;
+    background: #e0e0e0;
+    margin-bottom: 25px;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+}
+
+.copyright p {
+    color: #999999;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.error-message {
+    background-color: #fdecea;   /* soft red background */
+    color: #d93025;             /* red text */
+    border: 1px solid #f5c2c0;  /* subtle border */
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.error-message::before {
+    content: "⚠️"; /* warning emoji for quick recognition */
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 15px;
+    }
+    
+    .login-panel {
+        padding: 30px 20px;
+    }
+    
+    .brand-name {
+        font-size: 22px;
+    }
+    
+    .tagline {
+        font-size: 13px;
+    }
+    
+    .form-group input {
+        padding: 11px 14px;
+        font-size: 14px;
+    }
+    
+    .signin-btn {
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+}
+
+/* Focus states for accessibility */
+.form-group input:focus-visible {
+    outline: 2px solid #17A2B8;
+    outline-offset: 2px;
+}
+
+.signin-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}

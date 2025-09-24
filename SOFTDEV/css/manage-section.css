@@ -1,0 +1,321 @@
+/* copied from root manage-section.css */
+.form { margin-top: 8px; }
+.form-row { display: flex; align-items: center; gap: 16px; margin: 10px 0; }
+.form-label {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  min-width: 140px;
+}
+.select {
+  width: 220px;
+  height: 34px;
+  border: 2px solid #0b1f24;
+  background: white;
+  font-family: Inter, system-ui;
+}
+.actions { display: inline-flex; gap: 12px; margin-left: 16px; }
+.btn {
+  height: 34px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 4px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-save, .btn-add { background: #1f2f34; color: #fff; }
+.btn-cancel { background: #e2a80b; color: #fff; }
+
+.table-wrap { margin-top: 12px; }
+.data-table { width: 100%; border-collapse: collapse; }
+.data-table thead th {
+  background: var(--card-blue);
+  color: #fff;
+  text-align: left;
+  padding: 14px 16px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+}
+.data-table tbody td { padding: 12px 16px; border-top: 1px solid #e3e7ea; }
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 85vh;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.modal-header {
+  background: #2F4F4E;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  padding: 20px;
+  max-height: calc(80vh - 100px); /* Adjust for better scrolling */
+  overflow-y: auto;
+}
+
+.modal-body .form-row {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 300px;
+  height: 34px;
+  border: 1px solid #000;
+  background: white;
+  font-family: Inter, system-ui;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.btn-update {
+  background: #1f2f34;
+  color: #fff;
+}
+
+
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.grade-list::-webkit-scrollbar {
+  display: none;
+}
+
+.grade-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+.grade-table thead th {
+  background: #17a2b8;
+  color: #fff;
+  text-align: left;
+  padding: 12px 16px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.grade-table tbody td {
+  padding: 12px 16px;
+  border-top: 1px solid #e3e7ea;
+  position: relative;
+}
+
+.grade-table tbody td:last-child::after {
+  content: none !important;
+}
+
+/* Ensure last row is fully visible when scrolling */
+.grade-table tbody tr:last-child td {
+  border-bottom: 1px solid #e3e7ea;
+}
+
+.grade-list {
+  margin-top: 20px;
+  max-height: 350px;
+  overflow-y: auto;
+  border: 1px solid #e3e7ea;
+  border-radius: 4px;
+  /* Hide scrollbar but keep functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  /* Add padding to ensure last row is visible */
+  padding-bottom: 10px;
+}
+
+/* Only affect form-row inside the modal */
+#gradeModal .form-row {
+  display: block;
+  margin-bottom: 15px;
+}
+
+#gradeModal .form-label {
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+#gradeModal .form-input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #000;
+  font-size: 14px;
+  border-radius: 0;
+}
+
+.alert {
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.alert-success {
+  background-color: #d1f2eb;
+  border: 1px solid #1f2f34;
+  color: #1f2f34;
+}
+
+.alert-error {
+  background-color: #fdecea;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+.message-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  max-width: 400px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.message-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-left: 4px solid;
+}
+
+.message-popup.success .message-content {
+  border-left-color: #28a745;
+}
+
+.message-popup.error .message-content {
+  border-left-color: #dc3545;
+}
+
+.message-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.message-text {
+  flex-grow: 1;
+  font-weight: 500;
+  color: #333;
+}
+
+.message-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-close:hover {
+  color: #333;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    max-width: none;
+    max-height: 90vh;
+  }
+  
+  .modal-body {
+    max-height: calc(90vh - 80px);
+  }
+  
+  .grade-list {
+    max-height: 250px;
+  }
+}

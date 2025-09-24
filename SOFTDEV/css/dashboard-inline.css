@@ -1,0 +1,61 @@
+/* Dashboard Page Inline Styles */
+
+.analytics .legend { 
+    display: flex; 
+    gap: 18px; 
+    align-items: center; 
+    margin: 6px 0 12px 0; 
+}
+
+.analytics .legend .dot { 
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%; 
+    display: inline-block; 
+    margin-right: 8px; 
+}
+
+/* Match dashboard brand: Present = emerald, Absent = rose */
+.analytics .legend .present { 
+    background: #16a34a; 
+}
+
+.analytics .legend .absent { 
+    background: #dc2626; 
+}
+
+.analytics .range-btn { 
+    padding: 6px 12px; 
+    border: 1px solid #e5e7eb; 
+    border-radius: 8px; 
+    background: #fff; 
+    cursor: pointer; 
+    font-family: Inter, system-ui, Arial, sans-serif; 
+}
+
+.analytics .range-btn.active { 
+    background: #0ea5b7; 
+    border-color: #0ea5b7; 
+    color: #fff; 
+}
+
+/* Card icon row */
+.cards .card .stat-row { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 12px; 
+}
+
+.cards .card .stat-icon svg { 
+    width: 48px; 
+    height: 48px; 
+    stroke: #ffffff; 
+    fill: transparent; 
+    stroke-width: 1.8; 
+    opacity: 0.9; 
+}
+
+
+
+

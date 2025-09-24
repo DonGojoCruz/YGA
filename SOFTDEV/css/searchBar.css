@@ -1,0 +1,515 @@
+/* Enhanced Form Header */
+.form-header {
+    text-align: center;
+    margin-bottom: 25.5px; /* 30px * 0.85 */
+    padding-bottom: 17px; /* 20px * 0.85 */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-header h2 {
+    font-size: 1.36rem; /* 1.6rem * 0.85 */
+    color: #333;
+    margin-bottom: 6.8px; /* 8px * 0.85 */
+    font-weight: 600;
+}
+
+.form-header h2 i {
+    margin-right: 8.5px; /* 10px * 0.85 */
+    color: #4a5568;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 0.8075rem; /* 0.95rem * 0.85 */
+}
+
+/* Flex container for search boxes */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 21.25px; /* 25px * 0.85 */
+    margin-bottom: 25.5px; /* 30px * 0.85 */
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8.5px; /* 10px * 0.85 */
+    font-weight: 600;
+    font-size: 0.85rem; /* 1rem * 0.85 */
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.search-box label i {
+    margin-right: 6.8px; /* 8px * 0.85 */
+    color: #4a5568;
+    font-size: 0.935rem; /* 1.1rem * 0.85 */
+}
+
+/* Enhanced Dropdown styles */
+.search-box select {
+    width: 100%;
+    padding: 13.6px 17px; /* 16px * 0.85, 20px * 0.85 */
+    border-radius: 10.2px; /* 12px * 0.85 */
+    border: 2px solid #e1e5e9;
+    font-size: 0.85rem; /* 1rem * 0.85 */
+    box-sizing: border-box;
+    appearance: none;
+    background: white url('data:image/svg+xml;utf8,<svg fill="%234a5568" height="13.6" viewBox="0 0 24 24" width="13.6" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 13.6px center; /* 16px * 0.85 */
+    background-size: 13.6px; /* 16px * 0.85 */
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #333;
+}
+
+.search-box select:focus {
+    outline: none;
+    border-color: #4a5568;
+    box-shadow: 0 0 0 4px rgba(74, 85, 104, 0.1);
+    transform: translateY(-2px);
+}
+
+.search-box select:hover {
+    border-color: #4a5568;
+    box-shadow: 0 4px 12px rgba(74, 85, 104, 0.15);
+}
+
+.search-box select option {
+    padding: 10.2px; /* 12px * 0.85 */
+    color: #333;
+}
+
+/* Enhanced Search button */
+.main-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8.5px; /* 10px * 0.85 */
+    width: 100%;
+    margin: 25.5px auto 0; /* 30px * 0.85 */
+    padding: 15.3px 20.4px; /* 18px * 0.85, 24px * 0.85 */
+    border: none;
+    border-radius: 10.2px; /* 12px * 0.85 */
+    background: linear-gradient(135deg, #4a5568, #2d3748);
+    color: white;
+    font-size: 0.935rem; /* 1.1rem * 0.85 */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3.4px 12.75px rgba(74, 85, 104, 0.4); /* 4px * 0.85, 15px * 0.85 */
+    text-transform: none;
+    letter-spacing: 0.425px; /* 0.5px * 0.85 */
+}
+
+.main-button:hover {
+    background: linear-gradient(135deg, #2d3748, #1a202c);
+    transform: translateY(-2.55px); /* -3px * 0.85 */
+    box-shadow: 0 6.8px 21.25px rgba(74, 85, 104, 0.6); /* 8px * 0.85, 25px * 0.85 */
+}
+
+.main-button:active {
+    transform: translateY(-0.85px); /* -1px * 0.85 */
+    box-shadow: 0 3.4px 12.75px rgba(74, 85, 104, 0.4); /* 4px * 0.85, 15px * 0.85 */
+}
+
+.main-button i {
+    font-size: 1.02rem; /* 1.2rem * 0.85 */
+}
+
+/* Enhanced Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    padding: 17px; /* 20px * 0.85 */
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 34px 29.75px; /* 40px * 0.85, 35px * 0.85 */
+    border-radius: 17px; /* 20px * 0.85 */
+    width: 100%;
+    max-width: 340px; /* 400px * 0.85 */
+    text-align: center;
+    box-shadow: 0 17px 51px rgba(0, 0, 0, 0.3); /* 20px * 0.85, 60px * 0.85 */
+    animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(25.5px); /* 30px * 0.85 */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal h3 {
+    margin-bottom: 8.5px; /* 10px * 0.85 */
+    font-size: 1.275rem; /* 1.5rem * 0.85 */
+    color: #333;
+    font-weight: 600;
+}
+
+.modal h3::before {
+    content: "🔐";
+    display: block;
+    font-size: 2.125rem; /* 2.5rem * 0.85 */
+    margin-bottom: 12.75px; /* 15px * 0.85 */
+}
+
+.modal p {
+    color: #666;
+    margin-bottom: 21.25px; /* 25px * 0.85 */
+    font-size: 0.8075rem; /* 0.95rem * 0.85 */
+}
+
+.modal input[type="password"] {
+    width: 100%;
+    padding: 13.6px 17px; /* 16px * 0.85, 20px * 0.85 */
+    margin: 12.75px 0 21.25px 0; /* 15px * 0.85, 25px * 0.85 */
+    border: 2px solid #e1e5e9;
+    border-radius: 10.2px; /* 12px * 0.85 */
+    font-size: 0.85rem; /* 1rem * 0.85 */
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.modal input[type="password"]:focus {
+    outline: none;
+    border-color: #4a5568;
+    box-shadow: 0 0 0 3.4px rgba(74, 85, 104, 0.1); /* 4px * 0.85 */
+    transform: translateY(-1.7px); /* -2px * 0.85 */
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12.75px; /* 15px * 0.85 */
+    justify-content: center;
+    margin-top: 21.25px; /* 25px * 0.85 */
+}
+
+.modal button {
+    flex: 1;
+    padding: 11.9px 17px; /* 14px * 0.85, 20px * 0.85 */
+    border: none;
+    border-radius: 10.2px; /* 12px * 0.85 */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem; /* 1rem * 0.85 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6.8px; /* 8px * 0.85 */
+}
+
+.modal .submit-btn {
+    background: linear-gradient(135deg, #4a5568, #2d3748);
+    color: white;
+    box-shadow: 0 3.4px 12.75px rgba(74, 85, 104, 0.4); /* 4px * 0.85, 15px * 0.85 */
+}
+
+.modal .submit-btn:hover {
+    background: linear-gradient(135deg, #2d3748, #1a202c);
+    transform: translateY(-1.7px); /* -2px * 0.85 */
+    box-shadow: 0 6.8px 21.25px rgba(74, 85, 104, 0.6); /* 8px * 0.85, 25px * 0.85 */
+}
+
+.modal .cancel-btn {
+    background: #f1f3f4;
+    color: #666;
+    border: 2px solid #e1e5e9;
+}
+
+.modal .cancel-btn:hover {
+    background: #e8eaed;
+    color: #333;
+    border-color: #d1d5db;
+}
+
+/* Enhanced Responsive Design */
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+    .form-header h2 {
+        font-size: 1.275rem; /* 1.5rem * 0.85 */
+    }
+    
+    .search-box select {
+        padding: 12.75px 15.3px; /* 15px * 0.85, 18px * 0.85 */
+        font-size: 0.85rem; /* 1rem * 0.85 */
+    }
+    
+    .main-button {
+        padding: 14.45px 18.7px; /* 17px * 0.85, 22px * 0.85 */
+        font-size: 0.8925rem; /* 1.05rem * 0.85 */
+    }
+}
+
+/* Mobile tablet styles */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 25.5px 21.25px; /* 30px * 0.85, 25px * 0.85 */
+        margin: 0 8.5px; /* 10px * 0.85 */
+        border-radius: 12.75px; /* 15px * 0.85 */
+    }
+    
+    .modal-buttons {
+        flex-direction: column;
+        gap: 10.2px; /* 12px * 0.85 */
+    }
+    
+    .modal button {
+        width: 100%;
+        padding: 13.6px 17px; /* 16px * 0.85, 20px * 0.85 */
+        font-size: 0.85rem; /* 1rem * 0.85 */
+    }
+    
+    .form-header {
+        margin-bottom: 21.25px; /* 25px * 0.85 */
+        padding-bottom: 12.75px; /* 15px * 0.85 */
+    }
+    
+    .form-header h2 {
+        font-size: 1.19rem; /* 1.4rem * 0.85 */
+        line-height: 1.3;
+    }
+    
+    .form-header p {
+        font-size: 0.765rem; /* 0.9rem * 0.85 */
+    }
+    
+    .search-container {
+        gap: 17px; /* 20px * 0.85 */
+        margin-bottom: 21.25px; /* 25px * 0.85 */
+    }
+    
+    .search-box select {
+        padding: 11.9px 13.6px; /* 14px * 0.85, 16px * 0.85 */
+        font-size: 0.8075rem; /* 0.95rem * 0.85 */
+        border-radius: 8.5px; /* 10px * 0.85 */
+    }
+    
+    .search-box label {
+        font-size: 0.8075rem; /* 0.95rem * 0.85 */
+        margin-bottom: 6.8px; /* 8px * 0.85 */
+    }
+    
+    .main-button {
+        padding: 13.6px 17px; /* 16px * 0.85, 20px * 0.85 */
+        font-size: 0.85rem; /* 1rem * 0.85 */
+        border-radius: 8.5px; /* 10px * 0.85 */
+        margin-top: 21.25px; /* 25px * 0.85 */
+    }
+    
+    .modal h3 {
+        font-size: 1.19rem; /* 1.4rem * 0.85 */
+    }
+    
+    .modal input[type="password"] {
+        padding: 11.9px 13.6px; /* 14px * 0.85, 16px * 0.85 */
+        font-size: 0.8075rem; /* 0.95rem * 0.85 */
+        border-radius: 8.5px; /* 10px * 0.85 */
+    }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 21.25px 17px; /* 25px * 0.85, 20px * 0.85 */
+        border-radius: 10.2px; /* 12px * 0.85 */
+        margin: 0 4.25px; /* 5px * 0.85 */
+    }
+    
+    .modal h3 {
+        font-size: 1.105rem; /* 1.3rem * 0.85 */
+        margin-bottom: 6.8px; /* 8px * 0.85 */
+    }
+    
+    .modal h3::before {
+        font-size: 1.7rem; /* 2rem * 0.85 */
+        margin-bottom: 10.2px; /* 12px * 0.85 */
+    }
+    
+    .modal p {
+        font-size: 0.765rem; /* 0.9rem * 0.85 */
+        margin-bottom: 17px; /* 20px * 0.85 */
+    }
+    
+    .modal input[type="password"] {
+        padding: 10.2px 11.9px; /* 12px * 0.85, 14px * 0.85 */
+        margin: 10.2px 0 17px 0; /* 12px * 0.85, 20px * 0.85 */
+        font-size: 0.765rem; /* 0.9rem * 0.85 */
+    }
+    
+    .modal button {
+        padding: 11.9px 15.3px; /* 14px * 0.85, 18px * 0.85 */
+        font-size: 0.8075rem; /* 0.95rem * 0.85 */
+    }
+    
+    .form-header {
+        margin-bottom: 17px; /* 20px * 0.85 */
+        padding-bottom: 10.2px; /* 12px * 0.85 */
+    }
+    
+    .form-header h2 {
+        font-size: 1.0625rem; /* 1.25rem * 0.85 */
+    }
+    
+    .form-header p {
+        font-size: 0.7225rem; /* 0.85rem * 0.85 */
+    }
+    
+    .search-container {
+        gap: 15.3px; /* 18px * 0.85 */
+        margin-bottom: 17px; /* 20px * 0.85 */
+    }
+    
+    .search-box select {
+        padding: 10.2px 11.9px; /* 12px * 0.85, 14px * 0.85 */
+        font-size: 0.765rem; /* 0.9rem * 0.85 */
+        border-radius: 6.8px; /* 8px * 0.85 */
+    }
+    
+    .search-box label {
+        font-size: 0.765rem; /* 0.9rem * 0.85 */
+        margin-bottom: 5.1px; /* 6px * 0.85 */
+    }
+    
+    .search-box label i {
+        font-size: 0.85rem; /* 1rem * 0.85 */
+        margin-right: 5.1px; /* 6px * 0.85 */
+    }
+    
+    .main-button {
+        padding: 11.9px 15.3px; /* 14px * 0.85, 18px * 0.85 */
+        font-size: 0.8075rem; /* 0.95rem * 0.85 */
+        border-radius: 6.8px; /* 8px * 0.85 */
+        margin-top: 17px; /* 20px * 0.85 */
+    }
+    
+    .main-button i {
+        font-size: 0.935rem; /* 1.1rem * 0.85 */
+    }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 360px) {
+    .modal-content {
+        padding: 17px 12.75px; /* 20px * 0.85, 15px * 0.85 */
+        margin: 0;
+    }
+    
+    .form-header h2 {
+        font-size: 0.935rem; /* 1.1rem * 0.85 */
+    }
+    
+    .form-header p {
+        font-size: 0.68rem; /* 0.8rem * 0.85 */
+    }
+    
+    .search-box select {
+        padding: 8.5px 10.2px; /* 10px * 0.85, 12px * 0.85 */
+        font-size: 0.7225rem; /* 0.85rem * 0.85 */
+    }
+    
+    .search-box label {
+        font-size: 0.7225rem; /* 0.85rem * 0.85 */
+    }
+    
+    .main-button {
+        padding: 10.2px 13.6px; /* 12px * 0.85, 16px * 0.85 */
+        font-size: 0.765rem; /* 0.9rem * 0.85 */
+    }
+    
+    .modal h3 {
+        font-size: 1.02rem; /* 1.2rem * 0.85 */
+    }
+    
+    .modal input[type="password"] {
+        padding: 8.5px 10.2px; /* 10px * 0.85, 12px * 0.85 */
+        font-size: 0.7225rem; /* 0.85rem * 0.85 */
+    }
+    
+    .modal button {
+        padding: 10.2px 13.6px; /* 12px * 0.85, 16px * 0.85 */
+        font-size: 0.765rem; /* 0.9rem * 0.85 */
+    }
+}
+
+/* Landscape mobile orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .modal-content {
+        padding: 17px; /* 20px * 0.85 */
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .form-header {
+        margin-bottom: 12.75px; /* 15px * 0.85 */
+        padding-bottom: 8.5px; /* 10px * 0.85 */
+    }
+    
+    .form-header h2 {
+        font-size: 1.02rem; /* 1.2rem * 0.85 */
+    }
+    
+    .search-container {
+        gap: 12.75px; /* 15px * 0.85 */
+        margin-bottom: 12.75px; /* 15px * 0.85 */
+    }
+    
+    .main-button {
+        margin-top: 12.75px; /* 15px * 0.85 */
+        padding: 10.2px 17px; /* 12px * 0.85, 20px * 0.85 */
+    }
+    
+    .modal h3::before {
+        font-size: 1.53rem; /* 1.8rem * 0.85 */
+        margin-bottom: 6.8px; /* 8px * 0.85 */
+    }
+}
+
+/* Touch improvements */
+@media (hover: none) and (pointer: coarse) {
+    .search-box select {
+        min-height: 40.8px; /* 48px * 0.85 - Minimum touch target size */
+    }
+    
+    .main-button {
+        min-height: 40.8px; /* 48px * 0.85 */
+    }
+    
+    .modal button {
+        min-height: 37.4px; /* 44px * 0.85 */
+    }
+    
+    /* Larger touch targets for mobile */
+    .search-box select:focus {
+        transform: none; /* Remove transform on touch devices */
+    }
+    
+    .main-button:hover {
+        transform: none; /* Remove hover effects on touch */
+    }
+    
+    .modal .submit-btn:hover {
+        transform: none;
+    }
+}

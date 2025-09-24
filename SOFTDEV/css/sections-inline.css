@@ -1,0 +1,64 @@
+/* Sections Page Inline Styles */
+
+/* Password input container styling */
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input-container .form-input {
+    padding-right: 45px;
+    flex: 1;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 1;
+    transition: color 0.2s ease;
+    z-index: 10;
+}
+
+.eye-icon:hover {
+    color: #374151;
+}
+
+.eye-icon:focus {
+    outline: none;
+    color: #059669;
+}
+
+/* Error message styling for password fields */
+.password-error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    display: none;
+}
+
+.password-error.show {
+    display: block;
+}
+
+/* Password strength indicator */
+.password-match {
+    color: #22c55e;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    display: none;
+}
+
+.password-match.show {
+    display: block;
+}
+
+
+
+

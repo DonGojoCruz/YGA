@@ -1,0 +1,61 @@
+/* Status dropdown styling */
+.status-dropdown {
+    margin-top: 5px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    border-radius: 6px;
+    border: 1px solid #d7dee3;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: Inter, system-ui;
+    color: #374151;
+    min-width: 120px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.status-dropdown:hover {
+    border-color: #2db463;
+    box-shadow: 0 2px 6px rgba(45, 180, 99, 0.15);
+}
+
+.status-dropdown:focus {
+    border-color: #2db463;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(45, 180, 99, 0.1);
+}
+
+/* Style the dropdown options */
+.status-dropdown option {
+    padding: 8px 12px;
+    background-color: #fff;
+    color: #374151;
+}
+
+.status-dropdown option:hover {
+    background-color: #f3f4f6;
+}
+
+/* Header styling for the status column */
+.records-table th:last-child {
+    position: relative;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    th select.status-dropdown {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 8px;
+    }
+    
+    .records-table th:last-child {
+        min-width: 140px;
+    }
+}
+
+/* Ensure the status column has enough width */
+.records-table th:last-child,
+.records-table td:last-child {
+    min-width: 120px;
+}
